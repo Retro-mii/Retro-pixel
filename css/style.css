@@ -1,5 +1,4 @@
 @font-face {
-@font-face {
     font-family: 'super_plumber_brothersregular';
     src: url('supermariobros-webfont.eot');
     src: url('supermariobros-webfont.eot?#iefix') format('embedded-opentype'),
@@ -9,7 +8,6 @@
          url('supermariobros-webfont.svg#super_plumber_brothersregular') format('svg');
     font-weight: normal;
     font-style: normal;
-}
 }
 html {
   width: 100%;
