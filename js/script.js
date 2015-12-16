@@ -186,6 +186,7 @@ window.onload = function() {
   });
 
 
+
     var size = new Size(30, 20);
 
   var posDepart = [pix1,pix2,pix3,pix4,pix5,pix6,pix7,pix8,pix9,pix10,pix11,pix12,pix13,pix14,pix15,pix16,pix17,pix18,pix19,pix20,pix21,pix22];
@@ -229,4 +230,5 @@ window.onload = function() {
 			}
 		}
         project.activeLayer.position = view.center;
+
 }
