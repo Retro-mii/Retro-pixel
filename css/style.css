@@ -1,9 +1,15 @@
 @font-face {
-  font-family: 'super_plumber_brothersregular';
-  src: url('../../font/supermariobros-webfont.eot');
-  src: url('../../font/supermariobros-webfont.eot?#iefix') format('embedded-opentype'), url('../../font/supermariobros-webfont.woff2') format('woff2'), url('../../font/supermariobros-webfont.woff') format('woff'), url('../../font/supermariobros-webfont.ttf') format('truetype'), url('../../font/supermariobros-webfont.svg#super_plumber_brothersregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
+@font-face {
+    font-family: 'super_plumber_brothersregular';
+    src: url('supermariobros-webfont.eot');
+    src: url('supermariobros-webfont.eot?#iefix') format('embedded-opentype'),
+         url('supermariobros-webfont.woff2') format('woff2'),
+         url('supermariobros-webfont.woff') format('woff'),
+         url('supermariobros-webfont.ttf') format('truetype'),
+         url('supermariobros-webfont.svg#super_plumber_brothersregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 }
 html {
   width: 100%;
@@ -16,4 +22,7 @@ body {
 canvas {
   background-color: #F0FFF0;
   background-image: url("../../Retro-pixel/background/duckhunt.jpg");
+  background-position-x: -170px;
+  background-position-y: -100px;
+  background-size:135%;
 }
