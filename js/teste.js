@@ -7,16 +7,25 @@ window.onload = function() {
   var Path = paper.Path;
 
   var ctx = canvas.getContext("2d");
-  
+
 
   var pix1 = new Path.Rectangle({
+    path.onClick,
     size: [30, 30],
     point: (50),
     strokeWidth: 0.2,
     strokeColor: 'black',
     fillColor: '#D2691E',
-    center: [170, 110],
+    center: [170, 110];
+    pix1.animate({
+    properties: {
+        position: {
+            x: 100,    // 10 -> 100
+            y: "+100"  // 10 -> 10+100
+        }
+    }
   });
+
   var pix2 = new Path.Rectangle({
     size: [30, 30],
     point: (50),
