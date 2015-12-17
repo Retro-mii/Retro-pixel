@@ -58,8 +58,7 @@ h1 {
   width: 650px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 30%;
-  margin-top: 20%;
+  margin-top: 13%;
   border-top: 3px solid #F7B6D5;
   border-left: 3px solid #F7B6D5;
   border-bottom: 3px solid black;
@@ -101,4 +100,23 @@ h1 {
   height: 5px;
   box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 1);
   background-color: #F7B6D5;
+}
+@keyframes fleche{
+  0%{top:0px;}
+  50%{top:-10px;}
+  100%{top:0px;}
+}
+.fleche{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  height: 128px;
+  position: relative;
+  width:128px;
+
+}
+.fleche img {
+  position: absolute;
+  animation: fleche 0.8s infinite;
 }
