@@ -16,11 +16,11 @@ body, html {
   margin: 0 auto;
   background: repeating-linear-gradient(-45deg, #08080B, #08080B 5px, #2C272C 5px, #2C272C 10px);
 }
-.container{
-    height: 100%;
-    width: 100%;
-    background-color:black;
-    margin-bottom: 15%;
+.container {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  margin-bottom: 15%;
 }
 canvas {
   top: 20%;
@@ -33,13 +33,14 @@ canvas {
   margin-left: 30px;
   margin-top: 30px;
 }
-h1{
+h1 {
   color: #F7B6D5;
   margin-top: 0px;
   text-shadow: 2px 2px 2px black;
   text-align: center;
   font-size: 9em;
   font-family: 'super_plumber_brothersregular';
+
 }
 .bordure-tv {
   background-color: #776357;
@@ -51,13 +52,53 @@ h1{
   margin-right: auto;
 }
 .logoM {
+  position: relative;
   background-color: #D44A00;
   height: 450px;
   width: 650px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom:30%;
+  margin-bottom: 30%;
   margin-top: 20%;
-  box-shadow: 2px 2px 0px 2px rgba(0, 0, 0, 0.72);
-  border: 4px outset #F7B6D5;
+  border-top: 3px solid #F7B6D5;
+  border-left: 3px solid #F7B6D5;
+  border-bottom: 3px solid black;
+  border-right: 3px solid black;
+  box-shadow: 18px 8px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.carre1 {
+  position: absolute;
+  margin-left: 5px;
+  margin-top: 5px;
+  width: 5px;
+  height: 5px;
+  box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 1);
+  background-color: #F7B6D5;
+}
+.carre2 {
+  position: absolute;
+  margin-left: 5px;
+  margin-top: 440px;
+  width: 5px;
+  height: 5px;
+  box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 1);
+  background-color: #F7B6D5;
+}
+.carre3 {
+  position: absolute;
+  margin-top: 440px;
+  margin-left: 640px;
+  width: 5px;
+  height: 5px;
+  box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 1);
+  background-color: #F7B6D5;
+}
+.carre4 {
+  position: absolute;
+  margin-left: 640px;
+  margin-top: 5px;
+  width: 5px;
+  height: 5px;
+  box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 1);
+  background-color: #F7B6D5;
 }
