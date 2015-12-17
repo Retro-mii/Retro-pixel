@@ -1,8 +1,8 @@
+paper.install(window);
 window.onload = function() {
 
-  var canvas = document.getElementById('myCanvas');
 
-  paper.setup(canvas);
+  paper.setup("myCanvas");
 
   var Path = paper.Path;
 
@@ -196,20 +196,24 @@ var ok = new Path.Rectangle({
 	fillColor: 'black'
 });
 
-var clic = 0;
-var destination = Point.random() * view.size
-function onMouseUp(event){
+var clic = 1;
+var destination = Point.random().multiply(view.size);
+view.onMouseUp =function(event){
     clic=!clic;
 }
-function onFrame(event) {
+view.onFrame = function(event) {
 	// Each frame, rotate the path by 3 degrees:
-	var vector = destination - ok.position;
+	var vector = destination.subtract(ok.position);
     if(clic==0){
-    ok.position += vector/30;
+    ok.position = ok.position.add(vector.divide(10));
     ok.content = Math.round(vector.length);
     }
+    else {
+      ok.position = ok;
+
+    }
     if(vector.length <5){
-        destination = Point.random() * view.size;
+        destination = Point.random().multiply(view.size);
     }
 
 }
