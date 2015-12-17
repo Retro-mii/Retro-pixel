@@ -8,16 +8,16 @@ window.onload = function() {
 
 
 
- var pix1 = new Path.Rectangle({
+  var pix1 = new Path.Rectangle({
     size: [30, 30],
     point: (0),
     strokeWidth: 0.2,
     strokeColor: 'black',
     fillColor: '#D2691E',
     center: [365, 315],
-    });
+  });
 
-var pix2 = new Path.Rectangle({
+  var pix2 = new Path.Rectangle({
     size: [30, 30],
     point: (0),
     strokeWidth: 0.2,
@@ -180,41 +180,39 @@ var pix2 = new Path.Rectangle({
   var pix22 = new Path.Rectangle({
     size: [30, 30],
     point: (0),
-	justification: 'center',
+    justification: 'center',
     strokeWidth: 0.2,
     strokeColor: 'black',
     fillColor: 'black',
     center: [395, 525],
   });
 
-var ok = new Path.Rectangle({
+  var ok = new Path.Rectangle({
     size: [30, 30],
-	center: [200, 200],
-	point: view.center,
-	justification: 'center',
-	fontSize: 30,
-	fillColor: 'black'
-});
+    point:[395,525],
+    fontSize: 30,
+    fillColor: 'black'
+  });
+    ok.position.x= 395;
 
-var clic = 1;
-var destination = Point.random().multiply(view.size);
-view.onMouseUp =function(event){
-    clic=!clic;
-}
-view.onFrame = function(event) {
-	// Each frame, rotate the path by 3 degrees:
-	var vector = destination.subtract(ok.position);
-    if(clic==0){
-    ok.position = ok.position.add(vector.divide(10));
-    ok.content = Math.round(vector.length);
+  var clic = 0;
+  var destination = Point.random().multiply(view.size);
+  view.onMouseUp = function(event) {
+    clic = !clic;
+  }
+  view.onFrame = function(event) {
+    // Each frame, rotate the path by 3 degrees:
+    var vector = destination.subtract(ok.position);
+    if (clic == 0) {
+      ok.position = ok.position.add(vector.divide(10));
+      ok.content = Math.round(vector.length);
+    } else {
+        ok.position.x = 395;
+        ok.position.y = 525;
     }
-    else {
-      ok.position = ok;
-
-    }
-    if(vector.length <5){
-        destination = Point.random().multiply(view.size);
+    if (vector.length < 5) {
+      destination = Point.random().multiply(view.size);
     }
 
-}
+  }
 }
