@@ -156,13 +156,13 @@ h1 {
 
   @keyframes mvy {
     0% {
-      top: 15px;
+      top: 50px;
     }
     50% {
-      top: -15px;
+      top: 40px;
     }
     100% {
-      top: 15px;
+      top: 50px;
   }
   }
 
@@ -172,13 +172,14 @@ h1 {
     }
 
     100% {
-      right: 105%;
+      right: 115%;
     }
     }
   .nuage1 {
     position: absolute;
-    top : 50%;
-      animation: mvy 3s  infinite linear, mvx 10s infinite linear;
+    top : 50px;
+    z-index: 1000;
+      animation: mvy 5s  infinite linear, mvx 15s infinite linear;
     }
 
     @keyframes mvya {
@@ -194,17 +195,73 @@ h1 {
     }
     @keyframes mvxa {
       0% {
-        right: 15%;
+        right: -5%;
       }
 
       100% {
-        right: 55%;
+        right: 105%;
       }
       }
 
       .nuage2 {
       position: absolute;
-      top : 40%;
-        animation: mvya 3s  infinite linear, mvxa 10s infinite linear;
+      top : 35px;
+      z-index: 500;
+        animation: mvya 5s  infinite linear, mvxa 20s infinite linear;
         display: hidden;
       }
+
+      @keyframes mvyb {
+        0% {
+          top: 25px;
+        }
+        50% {
+          top: -25px;
+        }
+        100% {
+          top: 25px;
+      }
+      }
+      @keyframes mvxb {
+        0% {
+          right: -5%;
+        }
+
+        100% {
+          right: 105%;
+        }
+        }
+
+        .nuage3 {
+        position: absolute;
+        top : 40%;
+          animation: mvyb 3s  infinite linear, mvxb 10s infinite linear;
+          display: hidden;
+}
+@keyframes mvyc {
+  0% {
+    top: 25px;
+  }
+  50% {
+    top: 20px;
+  }
+  100% {
+    top: 25px;
+}
+}
+@keyframes mvxc {
+  0% {
+    right: -5%;
+  }
+
+  100% {
+    right: 105%;
+  }
+  }
+
+  .nuage4 {
+  position: absolute;
+  top : 25px;
+    animation: mvyc 5s  infinite linear, mvxc 25s infinite linear;
+    display: hidden;
+}
