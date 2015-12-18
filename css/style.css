@@ -52,8 +52,7 @@ h1 {
   width: 650px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 30%;
-  margin-top: 20%;
+  margin-top: 13%;
   border-top: 3px solid #F7B6D5;
   border-left: 3px solid #F7B6D5;
   border-bottom: 3px solid black;
@@ -96,19 +95,116 @@ h1 {
   box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 1);
   background-color: #F7B6D5;
 }
-.cloud {
-  top: 320px;
-  height: 90px;
-  width: 800px;
-  right: 80px;
-  border-radius: 5px;
-  background-position: 1px, 30px;
-  background-image: url("../img/nuage2.jpg");
+@keyframes fleche {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: -10px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+.fleche {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  height: 128px;
+  width: 128px;
   position: relative;
-  animation: run 5s infinite steps(9);
 }
-@keyframes run {
+.fleche img {
+  position: absolute;
+  animation: fleche 0.8s infinite;
+}
+@keyframes mvy {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: -10px;
+  }
+  100% {
+    top: 0px;
+}
+}
 
-	from { background-position: 0; }
-	to { background-position: -585px; }
-}
+@keyframes mvx {
+  0% {
+    right: -10%;
+  }
+
+  100% {
+    right: 105%;
+  }
+  }
+
+.cloud {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -645px;
+  margin-bottom: 10%;
+  height: 200px;
+  width: 795px;
+  border-radius: 40px;
+  background-position: 1px, 30px;
+  position: relative;
+  overflow: hidden;
+  }
+
+  @keyframes mvy {
+    0% {
+      top: 15px;
+    }
+    50% {
+      top: -15px;
+    }
+    100% {
+      top: 15px;
+  }
+  }
+
+  @keyframes mvx {
+    0% {
+      right: -10%;
+    }
+
+    100% {
+      right: 105%;
+    }
+    }
+  .nuage1 {
+    position: absolute;
+    top : 50%;
+      animation: mvy 3s  infinite linear, mvx 10s infinite linear;
+    }
+
+    @keyframes mvya {
+      0% {
+        top: 5px;
+      }
+      50% {
+        top: -5px;
+      }
+      100% {
+        top: 5px;
+    }
+    }
+    @keyframes mvxa {
+      0% {
+        right: 15%;
+      }
+
+      100% {
+        right: 55%;
+      }
+      }
+
+      .nuage2 {
+      position: absolute;
+      top : 40%;
+        animation: mvya 3s  infinite linear, mvxa 10s infinite linear;
+        display: hidden;
+      }
